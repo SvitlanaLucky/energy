@@ -94,6 +94,38 @@
 }
 }
 
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    transition: background-color var(--duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.social__icon {
+    fill: var(--icon-color);
+    transition: fill var(--duration) var(--timing-function);
+
+    .social__link:hover &,
+    .social__link:focus & {
+        fill: var(--main-color);
+    }
+}
+
 .social__icon_theme-dark {
     fill: var(--main-color);
 }
